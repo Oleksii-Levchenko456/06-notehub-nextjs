@@ -5,6 +5,7 @@ import NoteDetailsClient from "./NoteDetails.client"
 
 
 interface Props {
+
     params: Promise<{ id: string }>
 }
 
