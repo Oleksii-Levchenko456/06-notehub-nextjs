@@ -4,14 +4,15 @@ import { useQuery } from "@tanstack/react-query"
 import { useParams } from "next/navigation"
 import { getSingleNote } from "@/lib/api"
 import { Note } from "@/types/note"
-import css from './NoteDeteils.module.css'
+import css from './NoteDetails.module.css'
 
 const NoteDetailsClient = () => {
 
     const { id } = useParams<{ id: string }>()
     const { data: note, isLoading, error } = useQuery<Note>({
-        queryKey: ['notes', id],
-        queryFn: () => getSingleNote(id)
+        queryKey: ['note', id],
+        queryFn: () => getSingleNote(id),
+        refetchOnMount: false
     })
     return (
         <><div>

@@ -13,7 +13,7 @@ const NoteDetails = async ({ params }: Props) => {
     const { id } = await params
     const queryClient = new QueryClient
     queryClient.prefetchQuery({
-        queryKey: ['notes', id],
+        queryKey: ['note', id],
         queryFn: () => getSingleNote(id)
     })
 
