@@ -1,7 +1,3 @@
-<p>Loading, please wait...</p>
-
-// app/notes/loading.tsx
-
 const Loading = () => {
     return <p>Loading, please wait...</p>;
 }
